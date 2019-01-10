@@ -1,0 +1,16 @@
+IsEmpty
+PutItem D
+PutItem B
+PutItem F
+PutItem A
+PutItem C
+PutItem E
+PutItem G
+LevelOrderPrint
+PreOrderPrint
+InOrderPrint
+PostOrderPrint
+MirrorImage
+DeleteItem F
+LevelOrderPrint
+Quit

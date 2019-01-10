@@ -1,0 +1,4 @@
+
+interface Board {
+	void reversiBoard();
+}

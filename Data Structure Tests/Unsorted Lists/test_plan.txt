@@ -1,0 +1,358 @@
+
+~All code is left in UnsortedListTest.cpp~
+
+
+*INTEGER TEST PLAN*
+	 (I used separate lists for each test case)
+
+Case 1 Code:
+     - Initialize list with max size of 5
+     - Put items 1 through 5 into the list and print
+     - Attempt to put an additional item in the list
+     - Delete 4 from the list and print
+     - Make list empty and print
+     - Attempt to delete an item from the empty list
+
+Case 1 Output:
+
+     1
+     2    
+     3    
+     4
+     5
+     
+     Unable to add item
+     1
+     2
+     3
+     5
+          
+     Unable to delete item
+     
+     Test Complete
+  
+
+
+Case 2 Code:
+     - Initialize list with max size of 1
+     - Print isEmpty() and isFull()
+     - Add item to the list
+     - Print isEmpty() and isFull()
+
+Case 2 Output:
+
+     Empty: 1
+     Full: 0
+     
+     Empty: 0
+     Full: 1
+     
+     Test Complete
+
+
+
+Case 3 Code:
+     - Initialize list with max size of 5
+     - Add ints 1 through 5 to this list and print
+     - Initialize two additional lists of default size
+     - Split the first list at int 3
+     - Print list1
+     - Print list2
+
+Case 3 Output:
+
+     1
+     2
+     3
+     4
+     5
+     
+     1
+     2
+     3
+     
+     4
+     5
+     
+     Test Complete
+
+
+
+Case 4 Code:
+     - Initialize a list of max size 3
+     - Add ints 1 through 3 to the list and print
+     - Print the length of the list
+     - Get the next item 4 times (4th repeats the last item)
+     - Reset the list
+     - Get the next item (should be the first)
+
+Case 4 Output:
+     
+     1
+     2
+     3
+     
+     Length: 3
+     Next Item: 1
+     Next Item: 2
+     Next Item: 3	
+     Next Item: 3
+     
+     List reset
+     Next Item: 1
+
+     Test Complete
+
+
+
+Case 5 Code:
+     - Initialize a list with max size 3
+     - Declare boolean found
+     - Put items 1 through 3 into the list and print
+     - Attempt to find 2 (print result and found)
+     - Attempt to find 5 (print result and found)
+     
+Case 5 Output:
+     
+     1
+     2
+     3
+     
+     Find 2: 2
+     found = 1
+     
+     Find 5: 5
+     found = 0
+
+     Test Complete
+
+
+
+*STUDENT TEST PLAN*
+	 - A Stud list is initialized with max size 20
+
+Case 1 Code:
+     - Student data is read from a file and added to the list
+     - List is printed
+     - Display the value returned by isFull
+     - Attempt to add to a full list of students
+     - Delete the first, last, and a middle student
+     - Print the list (now missing 3 students)
+     
+Case 1 Output:
+     ID: 1000  Name: Courtois	Major: CS
+     ID: 1001  Name: Moses  	Major: BIO
+     ID: 1002  Name: Azpili	Major: CHEM
+     ID: 1003  Name: Luiz	Major: PHYS
+     ID: 1004  Name: Cahill	Major: ASTR
+     ID: 1005  Name: Alonso	Major: ENGL
+     ID: 1006  Name: Matic	Major: SPAN
+     ID: 1007  Name: Fabregas	Major: ART
+     ID: 1008  Name: Kante	Major: PSYCH
+     ID: 1009  Name: Willian	Major: MATH
+     ID: 1010  Name: Pedro	Major: CS
+     ID: 1011  Name: Hazard	Major: BIO
+     ID: 1012  Name: Costa	Major: CHEM
+     ID: 1013  Name: Batshuayi   Major: PHYS
+     ID: 1014  Name: Ivanovic	Major: ASTR
+     ID: 1015  Name: Begovic	Major: ENGL
+     ID: 1016  Name: Zouma	Major: SPAN
+     ID: 1017  Name: Terry	Major: ART
+     ID: 1018  Name: Ruben	Major: PSYCH
+     ID: 1019  Name: Musonda	Major: MATH
+     
+     Full?: 1
+     Unable to add item
+     
+     ID: 1001  Name: Moses	Major: BIO
+     ID: 1002  Name: Azpili	Major: CHEM
+     ID: 1003  Name: Luiz	Major: PHYS
+     ID: 1004  Name: Cahill	Major: ASTR
+     ID: 1005  Name: Alonso	Major: ENGL
+     ID: 1006  Name: Matic	Major: SPAN
+     ID: 1007  Name: Fabregas	Major: ART
+     ID: 1008  Name: Kante	Major: PSYCH
+     ID: 1010  Name: Pedro	Major: CS
+     ID: 1011  Name: Hazard	Major: BIO
+     ID: 1012  Name: Costa	Major: CHEM
+     ID: 1013  Name: Batshuayi	Major: PHYS
+     ID: 1014  Name: Ivanovic	Major: ASTR
+     ID: 1015  Name: Begovic	Major: ENGL
+     ID: 1016  Name: Zouma	Major: SPAN
+     ID: 1017  Name: Terry	Major: ART
+     ID: 1018  Name: Ruben	Major: PSYCH
+     
+     Test Complete
+
+
+Case 2 Code:
+     - Display the length of the list
+     - Delete a student from the list
+     - Display the new length (should be one less)
+
+Case 2 Output:
+
+       Length = 17
+       Deleting a student
+       New Length = 16
+
+       Test complete
+
+
+Case 3 Code:
+     - Get next item in the list
+     - Get next item in the list
+     - Get next item in the list
+     - Reset the list (move current_position)
+     - Get next item (should be the first)
+
+Case 3 Output:
+
+     Next Item: 
+     ID: 1002   Name: Azpili		Major: CHEM
+     Next Item: 
+     ID: 1003   Name: Luiz		Major: PHYS
+     Next Item: 
+     ID: 1004   Name: Cahill		Major: ASTR
+     
+     Resetting list
+     
+     Next Item: 
+     ID: 1002   Name: Azpili		Major: CHEM
+
+     Test Complete
+
+
+Case 4 Code:
+     - Get item with ID 1013
+     - Indicate if found
+     - Attempt to get item with ID 2000
+     - Indicate if found
+
+Case 4 Output:
+
+     Getting item with ID 1013
+     ID: 1013     Name: Batshuayi		Major: PHYS
+     Found?: 1
+     
+     Getting item that's not in list (ID 2000)
+     ID: 2000     Name: a	   Major: b
+     Found?: 0
+
+     Test Complete
+
+
+Case 5 Code:
+     - Print current list of students
+     - Initialize 2 separate lists
+     - Print the initial list
+     - Split the initial list
+     - Print the 2 resulting lists
+
+Case 5 Output:
+
+     Splitting this list at ID 1013: 
+     ID: 1002  Name: Azpili 	  Major: CHEM
+     ID: 1003  Name: Luiz	  Major: PHYS
+     ID: 1004  Name: Cahill	  Major: ASTR
+     ID: 1005  Name: Alonso	  Major: ENGL
+     ID: 1006  Name: Matic	  Major: SPAN
+     ID: 1007  Name: Fabregas	  Major: ART
+     ID: 1008  Name: Kante	  Major: PSYCH
+     ID: 1010  Name: Pedro 	  Major: CS
+     ID: 1011  Name: Hazard	  Major: BIO
+     ID: 1012  Name: Costa	  Major: CHEM
+     ID: 1013  Name: Batshuayi	  Major: PHYS
+     ID: 1014  Name: Ivanovic	  Major: ASTR
+     ID: 1015  Name: Begovic	  Major: ENGL
+     ID: 1016  Name: Zouma	  Major: SPAN
+     ID: 1017  Name: Terry	  Major: ART
+     ID: 1018  Name: Ruben	  Major: PSYCH
+
+     List 1:
+     ID: 1002	Name: Azpili	Major: CHEM
+     ID: 1003	Name: Luiz	Major: PHYS
+     ID: 1004	Name: Cahill	Major: ASTR
+     ID: 1005	Name: Alonso	Major: ENGL
+     ID: 1006	Name: Matic 	Major: SPAN
+     ID: 1007	Name: Fabregas	Major: ART
+     ID: 1008	Name: Kante	Major: PSYCH
+     ID: 1010	Name: Pedro	Major: CS
+     ID: 1011	Name: Hazard	Major: BIO
+     ID: 1012	Name: Costa	Major: CHEM
+     ID: 1013	Name: Batshuayi	Major: PHYS
+     
+     List 2:
+     ID: 1014	Name: Ivanovic	Major: ASTR
+     ID: 1015	Name: Begovic	Major: ENGL
+     ID: 1016	Name: Zouma	Major: SPAN
+     ID: 1017	Name: Terry	Major: ART
+     ID: 1018	Name: Ruben	Major: PSYCH
+
+     Test Complete
+
+
+Case 6 Code:
+     - Initialize an empty list
+     - Attempt to split the list
+     - Should print an error
+
+Case 6 Output:
+
+     Attempting to split an empty list
+     
+     List is empty
+
+     Test Complete
+
+
+Case 7 Code:
+     - Attempt to delete an item not in the list
+     - Should display an error
+
+Case 7 Output:
+     
+     Attempting to delete a Student not in the list
+
+     Unable to delete item
+
+     Test Complete
+
+
+Case 8 Code:
+     - Empty the list of students
+     - Print list (should be empty)
+     - Test the isFull function
+
+Case 8 Output:
+
+     Emptying the list
+     
+     Printing list:
+
+     Is the list full?: 0
+
+     Test Complete
+
+
+Case 9 Code:
+     - Try to delete from an empty Student list
+     - Should display an error message
+
+Case 9 Output:
+
+     Attempting to delete from an empty list
+
+     Unable to delete item
+
+     Test Complete
+
+
+Case 10 Code:
+     - Use getNextItem() on an empty list
+     - An error message should be displayed
+
+Case 10 Output:
+     
+     Getting next item of an empty list:
+     ID: 0   Name:     	  Major:
